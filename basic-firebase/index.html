@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script> 
+        <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Cloud Hotels & Inns</h1>
+
+        <div class="content">
+
+            <form id="add-hotel-form">
+                <input type="text" name="name" placeholder="Name...">
+                <input type="text" name="city" placeholder="City...">
+                <button>Add New Hotel</button>
+            </form>
+
+            <ul id="hotels-list"></ul>
+
+        </div>
+
+        <script>
+            /* The core Firebase JS SDK is always required and must be listed first --
+
+            TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries */
+
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDhT7d-mf0y_eD27Zc_CS0tULCtvZnZqd0",
+                authDomain: "fyp-firebase-3b063.firebaseapp.com",
+                databaseURL: "https://fyp-firebase-3b063.firebaseio.com",
+                projectId: "fyp-firebase-3b063",
+                storageBucket: "fyp-firebase-3b063.appspot.com",
+                messagingSenderId: "1091972157972",
+                appId: "1:1091972157972:web:b03aee8670af4a51e88d01",
+                measurementId: "G-CBKPD027D7"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            
+            const database = firebase.firestore();
+           // database.settings({ timestampsInSnapshots : true}); //Real time data
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
